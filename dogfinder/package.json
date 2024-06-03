@@ -31,6 +31,7 @@
     "json-server": "*",
     "react": "*",
     "react-dom": "*",
-    "react-router-dom": "*"
+    "react-router-dom": "*",
+    "uuid": "^9.0.1"
   }
 }
