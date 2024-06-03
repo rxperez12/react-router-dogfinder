@@ -1,9 +1,25 @@
-import './App.css';
+import { BrowserRouter } from "react-router-dom";
+import Nav from "./Nav.jsx";
+import RouteList from "./RouteList.jsx";
+import "./App.css";
 
+/** AppComponent for summary
+ *
+ * Props:
+ * -
+ *
+ * State:
+ * -
+ *
+ * App -> { Nav, Routes}
+ */
 function App() {
   return (
     <div className="App">
-      <h1>Good luck!</h1>
+      <BrowserRouter>
+        <Nav />
+        <RouteList />
+      </BrowserRouter>
     </div>
   );
 }
