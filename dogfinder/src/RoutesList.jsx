@@ -13,7 +13,10 @@ function RoutesList() {
         element={<DogDetails />}
         path="/dogs/:name"
       />
-      <Route path="*" element={<Navigate to="/dogs" />} />
+      <Route
+        path="*"
+        element={<Navigate to="/dogs" />}
+      />
     </Routes>
   );
 }
