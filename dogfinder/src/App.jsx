@@ -1,6 +1,6 @@
 import { BrowserRouter } from "react-router-dom";
 import Nav from "./Nav.jsx";
-import RouteList from "./RouteList.jsx";
+import RoutesList from "./RoutesList.jsx";
 import "./App.css";
 
 /** AppComponent for summary
@@ -18,7 +18,7 @@ function App() {
     <div className="App">
       <BrowserRouter>
         <Nav />
-        <RouteList />
+        <RoutesList />
       </BrowserRouter>
     </div>
   );
