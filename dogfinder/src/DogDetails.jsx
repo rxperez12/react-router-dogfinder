@@ -1,4 +1,5 @@
 import { v4 as uuid } from "uuid";
+import { useParams } from "react-router-dom";
 
 /** AppComponent for summary
  *
@@ -7,18 +8,22 @@ import { v4 as uuid } from "uuid";
  *
  * State: none
  *
- * App -> DogList -> DogDetails
+ * App -> Router -> DogDetails
  */
 
 function DogDetails({ dog }) {
+  const { name } = useParams();
+
   return (
     <div className="DogDetails">
       <h2>{dog.name}</h2>
-      <img src={`../public/${dog.src}.jpg`} />
+      <img src={`./${dog.src}.jpg`} />
       <p>Age: {dog.age}</p>
-      <ul>Facts about {dog.name}:
-        {dog.facts.map(
-          fact => <li key={uuid()}>{fact}</li>)}
+      <ul>
+        Facts about {dog.name}:
+        {dog.facts.map((fact) => (
+          <li key={uuid()}>{fact}</li>
+        ))}
       </ul>
     </div>
   );
