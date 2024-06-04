@@ -11,8 +11,10 @@ import { useParams } from "react-router-dom";
  * App -> Router -> DogDetails
  */
 
-function DogDetails({ dog }) {
+function DogDetails({ dogs }) {
   const { name } = useParams();
+
+  const dog = (dogs.filter(dog => dog.name === name))[0];
 
   return (
     <div className="DogDetails">
