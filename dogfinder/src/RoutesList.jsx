@@ -3,6 +3,12 @@ import DogList from "./DogList.jsx";
 import DogDetails from "./DogDetails.jsx";
 
 function RoutesList() {
+
+  //TODO: do we use callback here
+  // showSpecificDog(dog){
+
+  // }
+
   return (
     <Routes>
       <Route
@@ -10,7 +16,7 @@ function RoutesList() {
         path="/dogs"
       />
       <Route
-        element={<DogDetails />}
+        element={<DogDetails dog={}/>}
         path="/dogs/:name"
       />
       <Route
