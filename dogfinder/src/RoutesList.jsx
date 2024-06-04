@@ -2,21 +2,25 @@ import { Route, Routes, Navigate } from "react-router-dom";
 import DogList from "./DogList.jsx";
 import DogDetails from "./DogDetails.jsx";
 
-function RoutesList() {
-
-  //TODO: do we use callback here
-  // showSpecificDog(dog){
-
-  // }
+/** RoutesList renders routes for DogFinder app.
+ *
+ *  Props: array of objects with dog info like [{name, age, src, facts, id}]
+ *
+ *  State: none
+ *
+ *  App -> RoutesList - Routes
+*/
+function RoutesList({ dogs }) {
 
   return (
     <Routes>
       <Route
-        element={<DogList />}
+        element={<DogList dogs={dogs} />}
         path="/dogs"
       />
+
       <Route
-        element={<DogDetails dog={}/>}
+        element={<DogDetails dogs={dogs} />}
         path="/dogs/:name"
       />
       <Route
