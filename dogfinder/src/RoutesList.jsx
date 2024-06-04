@@ -9,19 +9,17 @@ import DogDetails from "./DogDetails.jsx";
  *  State: none
  *
  *  App -> RoutesList - Routes
-*/
+ */
 function RoutesList({ dogs }) {
-
   return (
     <Routes>
       <Route
+        element={<DogDetails dogs={dogs} />} //TODO: bug if doesn't exit
+        path="/dogs/:name"
+      />
+      <Route
         element={<DogList dogs={dogs} />}
         path="/dogs"
-      />
-
-      <Route
-        element={<DogDetails dogs={dogs} />}
-        path="/dogs/:name"
       />
       <Route
         path="*"

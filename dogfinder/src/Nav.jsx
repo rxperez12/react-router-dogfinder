@@ -1,15 +1,28 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { v4 as uuid } from "uuid";
 
-function Nav() {
+/** AppComponent for summary
+ *
+ * Props:
+ * -
+ *
+ * State:
+ * -
+ *
+ * call list
+ */
+function Nav({ dogNames }) {
   return (
-    <ul>
-      <li>
-        {" "}
-        <Link to="/dogs" /> Dogs
-      </li>
-      {/* dog details goes somewhere */}
-    </ul>
+    <div className=" navbar-nav mr-auto">
+      {" "}
+      DogsFinder
+      {dogNames.map((dogName) => (
+        <div key={uuid()}>
+          <Link to={`/dogs/${dogName}`}> {dogName}</Link>
+        </div>
+      ))}
+    </div>
   );
 }
 

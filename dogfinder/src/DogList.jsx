@@ -10,11 +10,13 @@ import { Link } from "react-router-dom";
  * App -> Routes -> DogList
  */
 function DogList({ dogs }) {
-
   return (
     <div className="DogsList">
       {dogs.map((dog) => (
-        <div key={uuid()}>
+        <div
+          key={uuid()}
+          className="container"
+        >
           <h3>
             <Link to={`/dogs/${dog.name}`}>{dog.name}</Link>
           </h3>

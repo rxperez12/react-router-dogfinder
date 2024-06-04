@@ -14,7 +14,7 @@ import "./App.css";
  * App -> { Nav, Routes}
  */
 function App() {
-  const [dogs, setDogs] = useState('');
+  const [dogs, setDogs] = useState("");
 
   /** Get dogs from API and set them in state */
   async function getDogs() {
@@ -28,7 +28,7 @@ function App() {
     return <div></div>;
   }
 
-  const dogNames = dogs.map(dog => dog.name);
+  const dogNames = dogs.map((dog) => dog.name);
   return (
     <div className="App">
       <BrowserRouter>
